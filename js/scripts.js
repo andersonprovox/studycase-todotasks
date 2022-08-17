@@ -46,3 +46,7 @@ todoForm.addEventListener("submit", (e) => {
         saveTodo(inputValue)
     }
 });
+
+document.addEventListener("click", (e) => {
+    
+});
