@@ -5,9 +5,13 @@ const todoList = document.querySelector("#todo-list");
 const editForm = document.querySelector("#edit-form");
 const editInput = document.querySelector("#edit-input");
 const cancelEditBtn = document.querySelector("#cancel-edit-btn");
+const year = document.querySelector('#current-year');
 
 let oldInputValue;
 //funcoes
+
+year.innerHTML = new Date().getFullYear();
+
 const saveTodo = (text) => {
     const todo = document.createElement("div");
     todo.classList.add("todo");
@@ -47,10 +51,10 @@ const updateTodo = (text) => {
     const todos = document.querySelectorAll(".todo")
 
     todos.forEach((todo) => {
-        let todotile = todo.querySelector("h3")
+        let todoTitle = todo.querySelector("h3")
 
         if(todoTitle.innerText === oldInputValue){
-            totoTitle.innerText = text;
+            todoTitle.innerText = text;
         }
     })
 }
